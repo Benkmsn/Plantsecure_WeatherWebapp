@@ -1,3 +1,4 @@
+// filepath: [deploy.yml](http://_vscodecontentref_/0)
 name: Deploy to GitHub Pages
 
 on:
@@ -29,13 +30,25 @@ jobs:
         env:
           OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
         run: |
-          cat > weather_assets/config.js << EOF
+          mkdir -p weather_assets
+          cat > [config.js](http://_vscodecontentref_/1) << 'EOF'
           // API Configuration
           const config = {
               apiKey: '${{ secrets.OPENWEATHER_API_KEY }}'
           };
           EOF
           echo "✅ config.js generated successfully"
+          cat weather_assets/config.js
+      
+      - name: Verify config.js exists
+        run: |
+          if [ -f weather_assets/config.js ]; then
+            echo "✅ config.js exists"
+            ls -la weather_assets/config.js
+          else
+            echo "❌ config.js does not exist"
+            exit 1
+          fi
       
       - name: Setup Pages
         uses: actions/configure-pages@v4
