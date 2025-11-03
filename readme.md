@@ -17,7 +17,7 @@ A modern, responsive weather application that provides real-time weather informa
 
 ## Demo
 
-Visit the live demo: [Add your deployed URL here]
+🚀 **[View Live Demo](https://benkmsn.github.io/Plantsecure_WeatherWebapp/)**
 
 ## Technologies Used
 
