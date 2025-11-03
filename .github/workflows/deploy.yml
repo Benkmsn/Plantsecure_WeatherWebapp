@@ -1,4 +1,3 @@
-// filepath: [deploy.yml](http://_vscodecontentref_/0)
 name: Deploy to GitHub Pages
 
 on:
@@ -31,7 +30,7 @@ jobs:
           OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
         run: |
           mkdir -p weather_assets
-          cat > [config.js](http://_vscodecontentref_/1) << 'EOF'
+          cat > weather_assets/config.js << 'EOF'
           // API Configuration
           const config = {
               apiKey: '${{ secrets.OPENWEATHER_API_KEY }}'
