@@ -1,0 +1,21 @@
+# API Keys and sensitive configuration
+weather_assets/config.js
+
+# IDE specific files
+.vscode/
+.idea/
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment variables
+.env
+.env.local
+
+# Dependencies (if you add npm later)
+node_modules/
